@@ -1,4 +1,4 @@
-# Fyne Etherium Wallet
+# Fyne Ethereum Wallet
 The Fyne Ethereum Wallet is a simple Ethereum wallet for storing and transacting Etherium. The wallet is build in Go using the Fyne GUI. 
 ## To Do List
 * Simplify GUI structs and remove unnecessary UserInterface returns
