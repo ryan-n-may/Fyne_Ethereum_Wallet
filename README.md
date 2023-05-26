@@ -1,2 +1,3 @@
-# Fyne_Etherium_Wallet
-A simple wallet for storing and transacting Etherium build in Go using a Fyne GUI. 
+# Fyne Etherium Wallet
+The Fyne Etherium Wallet is a simple Etherium wallet for storing and transacting Etherium. The wallet is build in Go using the Fyne GUI. 
+
