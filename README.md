@@ -1,5 +1,18 @@
 # Fyne Etherium Wallet
 The Fyne Ethereum Wallet is a simple Ethereum wallet for storing and transacting Etherium. The wallet is build in Go using the Fyne GUI. 
+## To Do List
+* Simplify GUI structs and remove unnecessary UserInterface returns
+![completion](https://progress-bar.dev/0)
+* Implement smart contract capability
+![completion](https://progress-bar.dev/0)
+* Test Wallet GUI for error conditions
+![completion](https://progress-bar.dev/50)
+* Write test modules for Go-Etherium methods & Implement error handling
+![completion](https://progress-bar.dev/15)
+* Create a page to view historical transactions
+![completion](https://progress-bar.dev/0)
+* Write comprehensive in-code documentation
+![completion](https://progress-bar.dev/10)
 ## Built using
 * GO-Ethereum https://geth.ethereum.org/
 * Fyne GUI https://fyne.io/
