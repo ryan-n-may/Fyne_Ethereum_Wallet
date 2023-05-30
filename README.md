@@ -1,7 +1,9 @@
 # Fyne Ethereum Wallet
-This was built over a weekend while I had the flu. It is an exploration into cryptocurrency and a work in progress. Any contributions are welcome. 
+![Ethereum](https://img.shields.io/badge/Ethereum-3C3C3D?style=for-the-badge&logo=Ethereum&logoColor=white) ![Go](https://img.shields.io/badge/go-%2300ADD8.svg?style=for-the-badge&logo=go&logoColor=white) ![Sublime Text](https://img.shields.io/badge/sublime_text-%23575757.svg?style=for-the-badge&logo=sublime-text&logoColor=important)
 
 The Fyne Ethereum Wallet is a simple Ethereum wallet for storing and transacting Etherium. The wallet is build in Go using the Fyne GUI. 
+
+This was built over a weekend while I had the flu. It is an exploration into cryptocurrency and a work in progress. Any contributions are welcome. The software still needs comprehensive documentation and commenting.
 
 ## Built using packages
 * GO-Ethereum https://geth.ethereum.org/
