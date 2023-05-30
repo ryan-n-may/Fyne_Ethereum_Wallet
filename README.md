@@ -5,6 +5,8 @@ The Fyne Ethereum Wallet is a simple Ethereum wallet for storing and transacting
 
 This was built over a weekend while I had the flu. It is an exploration into cryptocurrency and a work in progress. Any contributions are welcome. The software still needs comprehensive documentation and commenting.
 
+![Fyne Wallet GUI](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/summary_image.png)
+
 ## Built using packages
 * GO-Ethereum https://geth.ethereum.org/
 * Fyne GUI https://fyne.io/
@@ -19,9 +21,13 @@ The Fyne Wallet allows accessing wallets attached to already created accounts. T
 ### Encryption 
 All Fyne Wallet accounts are encrypted using AES-256 bit encryption built into Golang.  Encryption keys fixed-length and generated from `accountops.PASSWORD` via the SHA256 Hash function. Without the correct password, account wallet files cannot be decrypted and de-serialized (figure 4). 
 
+![New User](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/new_account.png)
 Figure 1: New user login window.
+![Account filesystem](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/filesystem.png)
 Figure 2: Account file structure.
+![Unlock User](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/Unlock_account.png)
 Figure 3: Unlock user login window
+![AES Decryption](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/AES_decryption.png)
 Figure 4: AES Decryption of locked user. 
 
 ## Wallet 
@@ -39,8 +45,12 @@ Figure 4: AES Decryption of locked user.
 * ~~View historical transactions~~ (Not implemented)
 * ~~Create a new smart contract~~ (Not implemented)
 
+![Wallet Toolbar](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/Wallet_toolbar.png)
+![Import/Export CSV](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/import_export_wallet.png)
 Figure 5: Import/Exporting a wallet from CSV
+![Rename Wallet](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/rename_wallet.png)
 Figure 6: Renaming a wallet
+![Wallet Interface](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/Wallet_interface.png)
 Figure 7: The Wallet Interface
 
 ## Transaction Menu
@@ -53,6 +63,8 @@ The transaction menu allows easy processing of transactions between local wallet
 | Gas limit                     | `uint64` (Measured in WEI)  |
 | Ethereum value                | `big.Float` (Ethereum)      |
 
+![Select delivery type](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/transaction_window_deliv_type.png)
 Figure 8: Sending funds to a local account/ to an address.
+![Transaction window](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/transaction_window.png)
 Figure 9: Transaction window.
 
