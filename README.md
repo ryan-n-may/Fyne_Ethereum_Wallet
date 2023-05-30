@@ -2,37 +2,55 @@
 This was built over a weekend while I had the flu. It is an exploration into cryptocurrency and a work in progress. Any contributions are welcome. 
 
 The Fyne Ethereum Wallet is a simple Ethereum wallet for storing and transacting Etherium. The wallet is build in Go using the Fyne GUI. 
-## To Do List
-* Report the current Gas price in transaction window.
-![completion](https://progress-bar.dev/0)
-* Display transaction reciept after sending a transaction.
-![completion](https://progress-bar.dev/0)
-* Simplify GUI structs and remove unnecessary UserInterface returns
-![completion](https://progress-bar.dev/0)
-* Implement smart contract capability
-![completion](https://progress-bar.dev/0)
-* Test Wallet GUI for error conditions
-![completion](https://progress-bar.dev/50)
-* Write test modules for Go-Etherium methods & Implement error handling
-![completion](https://progress-bar.dev/15)
-* Create a page to view historical transactions
-![completion](https://progress-bar.dev/0)
-* Write comprehensive in-code documentation
-![completion](https://progress-bar.dev/10)
-## Built using
+
+## Built using packages
 * GO-Ethereum https://geth.ethereum.org/
 * Fyne GUI https://fyne.io/
-## The Wallet
 
-![wallet GUI](https://github.com/ryan-n-may/Fyne_Etherium_Wallet/blob/main/screenshots/Screenshot%20from%202023-05-26%2022-14-26.png)
-### Wallet operations
-* View wallet key-sets and ballance.
+## Contents
+
+## Accounts 
+### Opening a new account
+The Fyne Wallet stores wallet information between program sessions by serializing the wallet struct `accountops.LocalWallet` and saving it to binary. Wallet information files are organised in directories according to the `accountops.USERNAME` of the account currently accessing the program.  In order to create a new account, the user must fill the login window form as seen in figure 1. Saving the wallet state after creating a new account will cause a file structure like the one in figure 2 to be created.  
+### Accessing an account
+The Fyne Wallet allows accessing wallets attached to already created accounts. The login window allows selecting a subdirectory of the `/accounts/` folder to access (figure 3). The correct `accountops.PASSWORD` must be input to successfully access the account wallets. 
+### Encryption 
+All Fyne Wallet accounts are encrypted using AES-256 bit encryption built into Golang.  Encryption keys fixed-length and generated from `accountops.PASSWORD` via the SHA256 Hash function. Without the correct password, account wallet files cannot be decrypted and de-serialized (figure 4). 
+
+Figure 1: New user login window.
+Figure 2: Account file structure.
+Figure 3: Unlock user login window
+Figure 4: AES Decryption of locked user. 
+
+## Wallet 
+### The Wallet information container
+* View wallet address, key-sets, and ballance.
+### The Wallet control buttons
 * Assign a wallet nickname.
-* Delete / Generate wallets. 
+* Delete, Add, and Generate wallets. 
 * Add wallets via CSV data (address and private key).
+* Save account state (serialize wallets into account directory)
+### The Wallet toolbar
 * Export wallets via CSV data.
-## Transaction Menu
-The transaction menu allows easy processing of transactions between local wallets (right), and to addresses (left). The transaction menu also has the option to assign gas price and gas limit manually. 
+* Import wallets via CSV data (address and private key).
+* Open a new transaction window
+* ~~View historical transactions~~ (Not implemented)
+* ~~Create a new smart contract~~ (Not implemented)
 
-![transaction GUI](https://github.com/ryan-n-may/Fyne_Etherium_Wallet/blob/main/screenshots/Screenshot%20from%202023-05-26%2022-19-25.png)
+Figure 5: Import/Exporting a wallet from CSV
+Figure 6: Renaming a wallet
+Figure 7: The Wallet Interface
+
+## Transaction Menu
+The transaction menu allows easy processing of transactions between local wallets, and to wallet addresses (figure 8). Further, gas price and gas limit can be assigned manually, or assigned to the market determined gas price. The present market gas price can be viewed and refreshed before completing the transactoin (figure 9). 
+
+| Transaction Variable          | Type                        |
+|-------------------------------|-----------------------------|
+| Sending and Recieving address | `string` (Hex)              |
+| Gas price                     | `big.Int` (Measured in WEI) |
+| Gas limit                     | `uint64` (Measured in WEI)  |
+| Ethereum value                | `big.Float` (Ethereum)      |
+
+Figure 8: Sending funds to a local account/ to an address.
+Figure 9: Transaction window.
 
