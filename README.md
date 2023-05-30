@@ -5,6 +5,9 @@ The Fyne Ethereum Wallet is a simple Ethereum wallet for storing and transacting
 
 This was built over a weekend while I had the flu. It is an exploration into cryptocurrency and a work in progress. Any contributions are welcome. The software still needs comprehensive documentation and commenting.
 
+![LinkedIn](https://img.shields.io/badge/linkedin-%230077B5.svg?style=for-the-badge&logo=linkedin&logoColor=white) 
+[My LinkedIn Account](http://www.linkedin.com/in/ryan-may-6655b115b)
+
 ![Fyne Wallet GUI](https://github.com/ryan-n-may/Fyne_Ethereum_Wallet/blob/main/screenshots/summary_image.png)
 
 ## Built using packages
